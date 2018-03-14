@@ -23,11 +23,11 @@ var showHerbTable = function() {
         if (err) throw err;
 
         var table = new Table ({
-            head: ["ID", "Herb", "Qty Oz", "Retail Cost", "Category", "Organic"]
+            head: ["ID", "Herb", "Qty Oz", "Retail Cost", "Category"]
         });
   
         for (var i = 0; i < res.length; i++) {
-            table.push([res[i].herbID, res[i].herb, res[i].qtyoz, res[i].retailcost, res[i].category, res[i].organic 
+            table.push([res[i].herbID, res[i].herb, res[i].qtyoz, res[i].retailcost, res[i].category
             ]);
         }
         console.log(table.toString());
